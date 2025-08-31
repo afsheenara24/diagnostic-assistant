@@ -1,46 +1,73 @@
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://medicaldiagnosticassistant.streamlit.app)
+# 🩺 Diagnosis Assistant
 
-# Diagnosis Assistant
-
-This is a **Diagnosis Assistant** application built with Streamlit and OpenAI's GPT API. It allows users to input patient symptoms, medical history, and test results to generate a possible diagnosis.
+**Diagnosis Assistant** is a Streamlit application powered by OpenAI's GPT API. It allows healthcare professionals and users to input patient symptoms, medical history, and test results to generate probable diagnoses efficiently.
 
 ---
 
-**Installation & Setup**
+## 🌟 Features
 
-**Prerequisites**
-Make sure you have the following installed:
-- Python 3.8 or later
-- `pip` (Python package manager)
-- OpenAI API key
-- Streamlit
+* Multi-language support
+* Patient data input fields:
 
-**Clone the Repository**
+  * Symptoms
+  * Medical history
+  * Examination results
+  * Lab test results
+* GPT-powered diagnosis generation
+* Responsive and user-friendly UI built with Streamlit
+* Easy deployment on Streamlit Cloud
 
-git clone https://github.com/your-repo/diagnosis-assistant.git
+---
+
+## 💻 Installation & Setup
+
+### Prerequisites
+
+* Python 3.8 or later
+* pip (Python package manager)
+* OpenAI API key
+* Streamlit
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/diagnosis-assistant.git
 cd diagnosis-assistant
+```
 
-**Create a Virtual Environment (Recommended)**
-It's best to use a virtual environment to manage dependencies:
+### Create a Virtual Environment (Recommended)
 
-python -m venv venv  # Create a virtual environment
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate  # On Windows
+```bash
+python -m venv venv
 
+# Activate environment:
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+```
 
-**Install Dependencies**
+### Install Dependencies
 
+```bash
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
+```
 
+### Configure API Keys
 
-**Set Up API Keys**
-Create a `.env` file in the project root and add your OpenAI API key:
+1. Create a `.env` file in the project root:
 
+```env
 OPENAI_API_KEY=your_openai_api_key_here
+```
 
+2. Configure Streamlit secrets:
 
-Also, ensure your Streamlit secrets file (`~/.streamlit/secrets.toml` or `C:\Users\your-user\.streamlit\secrets.toml`) is properly configured:
+* Windows: `C:\Users\<your-user>\.streamlit\secrets.toml`
+* macOS/Linux: `~/.streamlit/secrets.toml`
 
+```toml
 [general]
 openai_api_key = "your_openai_api_key_here"
 openai_api_model = "gpt-4"
@@ -52,37 +79,43 @@ openai_api_presp = 0.5
 [prompt_canvas]
 prompt_system = "You are a helpful medical assistant."
 prompt_words = ["Patient details: ", "Pregnancy status: ", "Medical history: ", "Symptoms: ", "Examination results: ", "Lab test results: ", "Language: "]
+```
 
-**Running the Application**
-After setting up the environment and dependencies, run the following command:
+### Run the Application
 
+```bash
 streamlit run app.py
+```
 
-This will start the Streamlit web application. Open the displayed URL (e.g., `http://localhost:8501`) in your browser.
-
-**Features**
-- Multi-language support
-- Patient data input fields (symptoms, history, lab results, etc.)
-- OpenAI GPT-based diagnosis generation
-- Responsive UI with Streamlit
-- User-friendly interface
-
-**Troubleshooting**
-If you run into issues:
-- Make sure your API keys are correctly set.
-- Ensure all dependencies are installed using `pip list`.
-- Run `streamlit cache clear` if the app is not updating.
-- Check logs for errors when running `streamlit run app.py`.
-
-**Contributing**
-Feel free to fork this repository and submit pull requests with improvements!
-
-**License**
-This project is licensed under the MIT License. See `LICENSE` for details.
+Open the URL displayed in the terminal (e.g., [http://localhost:8501](http://localhost:8501)).
 
 ---
 
-## Contact
-For any issues or suggestions, please open an issue on GitHub or contact the author.
+## ⚠️ Troubleshooting
 
+* Ensure API keys are set correctly.
+* Verify dependencies: `pip list`
+* Clear Streamlit cache if needed: `streamlit cache clear`
+* Check terminal logs for errors
 
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make changes and commit (`git commit -m "Add feature"`)
+4. Push to your branch (`git push origin feature-name`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## 📞 Contact
+
+For feedback, issues, or suggestions, open an issue on GitHub or contact the author.
