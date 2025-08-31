@@ -17,7 +17,7 @@
 * Responsive and user-friendly UI built with Streamlit
 * Easy deployment on Streamlit Cloud
 
-  ![App Screenshot](Screenshot.png)
+  ![App Screenshot](Diagnosis-assistant.png)
 
 ---
 
